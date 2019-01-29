@@ -1,0 +1,57 @@
+// chs  简体中文   cht  繁体中文   en   英语
+let language = {
+  chs: {
+    sign2d_title: '2D签到投屏',
+    sign_code: '扫码签到',
+    sign2d_list: '签到名单',
+    sign2d_prompt: '扫码加入空间参与抽奖',
+    sign_already: '已签到',
+    sign3d_title: '3D签到投屏',
+    lucky2d_title: '2D抽奖投屏',
+    lucky2d_draw: '幸运抽奖',
+    lucky_start: '开始抽奖',
+    Congratulations: '恭喜您中奖了',
+    lucky3d_title: '3D抽奖投屏',
+    lucky_stop: '停止抽奖',
+    barrage_screen_mirroring: '弹幕投屏',
+    post_on_wall: '发言上墙',
+    interact_with_others: '来友空间“动态”发言 火热互动',
+    win_present_posts: '在友空间动态发言就有机会在大屏幕上展示你的发言哦'
+  },
+  cht: {
+    sign2d_title: '2D簽到投屏',
+    sign_code: '掃碼簽到',
+    sign2d_list: '簽到名單',
+    sign2d_prompt: '掃碼加入空間參與抽獎',
+    sign_already: '已簽到',
+    sign3d_title: '3D簽到投屏',
+    lucky2d_title: '2D抽獎投屏',
+    lucky2d_draw: '幸運抽獎',
+    lucky_start: '開始抽獎',
+    Congratulations: '恭喜您中獎了',
+    lucky3d_title: '3D抽獎投屏',
+    lucky_stop: '停止抽獎',
+    barrage_screen_mirroring: '彈幕投屏',
+    post_on_wall: '發言上牆',
+    interact_with_others: '來友空間“動態”發言 火熱互動',
+    win_present_posts: '在友空間動態發言就有機會在大螢幕上展示你的發言哦'
+  },
+  en: {
+    sign2d_title: '2D Check-in Screen Mirroring',
+    sign_code: 'Scan QR code to check in',
+    sign2d_list: 'Check-in List',
+    sign2d_prompt: 'Scan QR code to join space and participate in lucky draw',
+    sign_already: 'Checked In',
+    sign3d_title: '3D Check-in Screen Mirroring',
+    lucky2d_title: '2D Lucky Draw Screen Mirroring',
+    lucky2d_draw: 'Lucky Draw',
+    lucky_start: 'Start Lucky Draw',
+    Congratulations: 'Congratulations!',
+    lucky3d_title: '3D Lucky Draw Screen Mirroring',
+    lucky_stop: 'Stop Lucky Draw',
+    barrage_screen_mirroring: 'Barrage Screen Mirroring',
+    post_on_wall: 'Post on Wall',
+    interact_with_others: 'Create posts and interact with others in YouZone Moments',
+    win_present_posts: 'Create posts in YouZone Moments, and win opportunities to present your posts in large screen'
+  }
+}

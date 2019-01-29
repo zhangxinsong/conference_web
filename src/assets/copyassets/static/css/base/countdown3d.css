@@ -1,0 +1,58 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #000;
+  background-size: cover;
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+a {
+  color: #ffffff;
+}
+
+.element {
+  width: 100px;
+  /* 120 160 */
+  height: 100px;
+  text-align: center;
+  cursor: default;
+}
+
+.element > div {
+  padding: 0 5px;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-size: 42px;
+  font-weight: bold;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .2s ease all;
+}
+
+.element:hover {
+ 
+}
+
+.element img {
+  width: 100px;
+  height: 100px;
+}
+
+.scene {
+  height: 88px;
+  width: 88px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -44px;
+  margin-top: -44px;
+}

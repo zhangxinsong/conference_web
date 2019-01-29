@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.barrage {
+    background-color: rgba(0, 0, 0, .5);
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 0 20px 0 8px;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    white-space: nowrap;
+    border-radius: 40%;
+    display: flex;
+    align-items: center;
+}
+
+.barrage .avatar {
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 20px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.barrage .avatar img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 大 */
+.barrage.large {
+    height: 70px;
+    border-radius: 35px;
+}
+.barrage.large .avatar {
+    width: 55px;
+    height: 55px;
+    font-size: 18px;
+}
+.barrage.large .name {
+    font-size: 20px;
+}
+.barrage.large .content {
+    font-size: 26px;
+}
+
+/* 中 */
+.barrage.medium {
+    height: 50px;
+    border-radius: 25px;
+}
+.barrage.medium .avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+}
+.barrage.medium .name {
+    font-size: 14px;
+}
+.barrage.medium .content {
+    font-size: 16px;
+}
+
+/* 小 */
+.barrage.small {
+    height: 44px;
+    border-radius: 22px;
+}
+.barrage.small .avatar {
+    width: 35px;
+    height: 35px;
+    font-size: 12px;
+}
+.barrage.small .name {
+    font-size: 12px;
+}
+.barrage.small .content {
+    font-size: 14px;
+}
+
+html,
+body,
+#container {
+    width: 100%;
+    height: 100%;
+}
+
+#container {
+    position: relative;
+    overflow: hidden;
+    perspective: 1000px;
+}

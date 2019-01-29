@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+</head>
+<link rel="stylesheet" href="../css/base/sign2d.css">
+<script src="../js/common/jquery.min.js"></script>
+<script src="../js/common/ajax.js"></script>
+<script src="../js/common/qrcode.js"></script>
+<script src="../js/common/md5.js"></script>
+<script src="../js/common/getColor.js"></script>
+<script src="../js/common/language.js"></script>
+
+<body>
+  <div id="container">
+    <div class="container-main">
+      <div class="container-left">
+        <div class="container-left-title"></div>
+        <div id="qrcode" class="container-left-code"></div>
+        <div class="container-left-prompt">
+          <!-- 扫码加入空间参与抽奖 -->
+        </div>
+        <div class="container-left-num">
+          <div class="container-left-num-title">已签到</div>
+          <div class="container-left-shadow"></div>
+          <div class="container-left-num-first">
+            <ul id="swiper_one">
+              <li>0</li>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+              <li>6</li>
+              <li>7</li>
+              <li>8</li>
+              <li>9</li>
+            </ul>
+          </div>
+          <div class="container-left-num-second">
+            <ul id="swiper_two">
+              <li>0</li>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+              <li>6</li>
+              <li>7</li>
+              <li>8</li>
+              <li>9</li>
+            </ul>
+          </div>
+          <div class="container-left-num-third">
+            <ul id="swiper_three">
+              <li>0</li>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+              <li>6</li>
+              <li>7</li>
+              <li>8</li>
+              <li>9</li>
+              <li>0</li>
+            </ul>
+          </div>
+          <div class="container-left-num-four">
+            <ul id="swiper_four">
+              <li>0</li>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+              <li>6</li>
+              <li>7</li>
+              <li>8</li>
+              <li>9</li>
+              <li>0</li>
+            </ul>
+          </div>
+          <div class="container-left-num-five">
+            <ul id="swiper_five">
+              <li>0</li>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+              <li>6</li>
+              <li>7</li>
+              <li>8</li>
+              <li>9</li>
+              <li>0</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container-right">
+        <div class="container-right-title"></div>
+        <div id="luckyList" class="container-right-list">
+        </div>
+      </div>
+    </div>
+    <div class="container-mask">
+      <div id="signInDom">
+      </div>
+    </div>
+</body>
+<script src="../js/base/sign2d.js"></script>
+<script src="../js/base/signCount.js"></script>
+
+</html>

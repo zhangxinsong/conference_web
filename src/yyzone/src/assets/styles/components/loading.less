@@ -1,0 +1,42 @@
+.yy-loading {
+    display: inline-block;
+    font-size: 0;
+    &.yy-loading-small {
+        width: 25px;
+        .yy-loading-primary {
+            background-image: url('../../images/loading-primary-small.png');
+        }
+        .yy-loading-base {
+            background-image: url('../../images/loading-base-small.png');
+        }
+    }
+    &.yy-loading-large {
+        width: 40px;
+        .yy-loading-primary {
+            background-image: url('../../images/loading-primary-large.png');
+        }
+        .yy-loading-base {
+            background-image: url('../../images/loading-base-large.png');
+        }
+    }
+    .yy-rotate {
+        padding-bottom: 100%;
+        position: relative;
+        .rotate;
+        .yy-rotate-icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .yy-rotate-icon-default {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}

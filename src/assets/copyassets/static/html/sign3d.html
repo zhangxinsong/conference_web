@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/animate.min.css">
+  <link rel="stylesheet" href="../css/base/sign3d.css">
+</head>
+
+<body>
+  <!-- <img id="imgZIP" src="" alt="" /> -->
+  <!-- <img id="imgHD" style="display: none" src="" alt="" /> -->
+  <div id="container" style="position: absolute; top: 0; left: 0;height: 100%;width: 100%;background-size: 100% 100%;background-repeat: no-repeat">
+
+  </div>
+  <div class="code">
+    <div class="bg-white">
+      <p class="scan-tip"></p>
+      <div id="qrcode">
+      </div>
+      <div class="sign-left-num">
+        <div class="sign-left-num-title"></div>
+        <div class="sign-left-shadow"></div>
+        <div class="sign-left-num-first">
+          <ul id="swiper_one">
+            <li>0</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+          </ul>
+        </div>
+        <div class="sign-left-num-second">
+          <ul id="swiper_two">
+            <li>0</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+          </ul>
+        </div>
+        <div class="sign-left-num-third">
+          <ul id="swiper_three">
+            <li>0</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+          </ul>
+        </div>
+        <div class="sign-left-num-four">
+          <ul id="swiper_four">
+            <li>0</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+          </ul>
+        </div>
+        <div class="sign-left-num-five">
+          <ul id="swiper_five">
+            <li>0</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- loading start -->
+  <!-- <img class="scene" src="./img/loading.gif" alt=""> -->
+  <!-- loading end -->
+
+  <!-- common -->
+  <script src="../js/common/jquery.min.js"></script>
+  <script src="../js/common/three.js"></script>
+  <script src="../js/common/tween.min.js"></script>
+  <script src="../js/common/TrackballControls.js"></script>
+  <script src="../js/common/CSS3DRenderer.js"></script>
+
+  <script src="../js/common/md5.js"></script>
+  <script src="../js/common/utils.js"></script>
+  <script src="../js/common/ajax.js"></script>
+
+  <script src="../js/common/getColor.js"></script>
+  <script src="../js/common/qrcode.js"></script>
+  <script src="../js/common/name.js"></script>
+  <script src="../js/base/fullscreen.js"></script>
+  <script src="../js/base/sign3d.js"></script>
+  <script src="../js/base/signCount.js"></script>
+  <script src="../js/common/language.js"></script>
+  <script>
+    var initSign = new Sign3D({
+      objectLen: 50
+    })
+    var timestamp = -1;
+    var timestampTwo = -1;
+    var sign3d_params = getRequest(location.search);
+    var activityId = sign3d_params.activityId;
+    var token = sign3d_params.token;
+    var bgHD = sign3d_params.bg;
+    var bgZip = sign3d_params.bg + '.thumb.jpg';
+
+    // 多语
+    // let sign3d_language = 'zh-CN';
+    let sign3d_language = sign3d_params.lang;
+
+    if (sign3d_language === 'zht') {
+      sign3d_language = language.cht;
+    } else if (sign3d_language === 'en') {
+      sign3d_language = language.en;
+    } else {
+      sign3d_language = language.chs;
+    }
+    document.title = sign3d_language.sign3d_title;
+    $('.scan-tip').text(sign3d_language.sign_code);
+    $('.sign-left-num-title').text(sign3d_language.sign_already)
+
+    // 生成二维码的Url
+    var shortUrl = '';
+    $('#container').css("background-image", 'url(' + bgHD + ')');
+
+    //  签到总人数
+    let signData = 0;
+    //  生成二维码
+    getJSON(`${interface.activityLottery}/${activityId}/signin/setting/qrcode?token=${token}&language=${sign3d_params.lang}`).then(
+      (resolve) => {
+        var data = JSON.parse(resolve)
+        shortUrl = data.shortUrl;
+        var qrcode = new QRCode(document.getElementById('qrcode'), {
+          text: shortUrl,
+          width: 200,
+          height: 200,
+          colorDark: "#000000",
+          colorLight: "#ffffff",
+          correctLevel: QRCode.CorrectLevel.Q
+        });
+      })
+    // $('#imgZIP').attr("src", bgZip);
+
+    // imgHD.onload = function () {
+    //   $('#imgZIP').hide();
+    //   $('#imgHD').show();
+
+    getMember(timestamp, function (data) {
+      if (data && data.length) {
+        var nameLen = data.length - 1
+        var i = 0
+        var nameTimer = setInterval(function () {
+          if (i >= nameLen) clearInterval(nameTimer)
+          data[i].color = getColor(data[i].user.name)
+          initSign.addObject(data[i].user)
+          i++
+        }, 500)
+      }
+      setInterval(function () {
+        getMember(timestamp, function (data) {
+          if (data && data.length) {
+            var nameLen = data.length - 1
+            for (var i = 0; i <= nameLen; i++) {
+              data[i].color = getColor(data[i].user.name)
+              initSign.addObject(data[i].user)
+            }
+          }
+        })
+      }, 1000)
+    })
+
+    function getMember(ts, call) {
+      getJSON(`${interface.activityLottery}/${activityId}/signin/record/incremental/${timestamp}?token=${token}&language=${sign3d_params.lang}`).then(
+        (resolve) => {
+          var data = JSON.parse(resolve);
+          timestamp = data.nextTs;
+          signData = data.count;
+          call && call(data.data);
+        })
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+.barrage {
+  position: fixed;
+  bottom: 70px;
+  right: -1000px;
+  display: inline-block;
+  width: 1000px;
+  z-index: 99999
+}
+
+.barrage_box {
+  background-color: rgba(0, 0, 0, .5);
+  padding-right: 8px;
+  height: 50px;
+  display: inline-block;
+  border-radius: 25px;
+  transition: all .3s;
+}
+
+.barrage_font .p div {
+  font-size: 20px;
+}
+
+.barrage_box .portrait {
+  float: left;
+  display: block;
+  margin-top: 5px;
+  margin-right: 10px;
+  margin-left: 6px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  overflow: hidden;
+  color: #FFF;
+}
+
+.barrage_box .content {
+  /* margin-right: 10px; */
+  /* font-size: 14px; */
+  color: #fff;
+  /* line-height: 40px; */
+  /* margin-left: 18px; */
+}
+
+.barrage a {
+  text-decoration: none;
+}
+
+#container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* height: 300px; */
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.right {
+  float: left;
+  padding: 5px 0;
+  padding-right: 20px;
+  height: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 1000px;
+}
+
+/* large */
+.large .barrage_box {
+  height: 70px;
+  border-radius: 35px;
+}
+
+.large .portrait {
+  margin-top: 8px;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  font-size: 18px;
+  color: #FFF;
+}
+
+.large .right {
+  height: 70px;
+}
+
+.large .content {
+  font-size: 26px;
+}
+
+.large .name {
+  color: #FFF;
+  font-size: 20px;
+}
+
+/* medium */
+.medium .barrage_box {
+  height: 50px;
+  border-radius: 25px;
+}
+
+.medium .portrait {
+  margin-top: 5px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #FFF;
+}
+
+.medium .right {
+  height: 40px;
+}
+
+.medium .content {
+  font-size: 16px;
+}
+
+.medium .name {
+  color: #FFF;
+  font-size: 14px;
+}
+
+/* small */
+.small .barrage_box {
+  height: 44px;
+  border-radius: 25px;
+}
+
+.small .portrait {
+  margin-top: 6px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  font-size: 12px;
+  color: #FFF;
+}
+
+.small .right {
+  height: 34px;
+}
+
+.small .content {
+  font-size: 14px;
+}
+
+.small .name {
+  color: #FFF;
+  font-size: 12px;
+}

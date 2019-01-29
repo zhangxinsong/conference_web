@@ -1,0 +1,161 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #000;
+  background-size: cover;
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+a {
+  color: #ffffff;
+}
+
+.element {
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+  color: rgba(255, 255, 255, .8);
+  overflow: hidden;
+  white-space: nowrap;
+  border-radius: 50%;
+  font-size: 36px;
+}
+
+.element img {
+  width: 100px;
+  height: 100px;
+}
+
+.scene {
+  height: 88px;
+  width: 88px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -44px;
+  margin-top: -44px;
+}
+
+.code {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  margin-top: -230px;
+}
+
+.code .bg-white {
+  background: #fff;
+  border-radius: 5px;
+  padding: 20px 14px;
+}
+
+.scan-tip {
+  background: #fff;
+  text-align: center;
+  font-size: 28px;
+  padding: 5px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 200px;
+}
+
+#qrcode {
+  margin: 5px 0;
+}
+
+#qrcode img {
+  max-width: 100%;
+}
+
+.sign-left-num {
+  position: relative;
+  margin: 10px auto 0;
+  width: 200px;
+  height: 150px;
+  background: url('../../img/sign2d/sign_count.png') no-repeat;
+  background-size: cover;
+}
+
+.sign-left-num-title {
+  color: #FFF;
+  font-size: 18px;
+  font-family: PingFangSC;
+  text-align: center;
+  position: relative;
+  top: 17px;
+}
+
+.sign-left-shadow {
+  position: relative;
+  top: 25px;
+  left: 14px;
+  width: 180px;
+  height: 88px;
+  background: url(../../img/lucky2d/shadow.png) no-repeat;
+  background-size: cover;
+}
+
+.sign-left-num-first {
+  position: absolute;
+  top: 53px;
+  left: 20px;
+  width: 30px;
+  height: 72px;
+  overflow: hidden;
+}
+
+.sign-left-num-second {
+  position: absolute;
+  top: 53px;
+  left: 56px;
+  width: 30px;
+  height: 72px;
+  overflow: hidden;
+}
+
+.sign-left-num-third {
+  position: absolute;
+  top: 53px;
+  left: 90px;
+  width: 30px;
+  height: 72px;
+  overflow: hidden;
+}
+
+.sign-left-num-four {
+  position: absolute;
+  top: 53px;
+  left: 127px;
+  width: 30px;
+  height: 72px;
+  overflow: hidden;
+}
+
+.sign-left-num-five {
+  position: absolute;
+  top: 53px;
+  left: 160px;
+  width: 30px;
+  height: 72px;
+  overflow: hidden;
+}
+
+.sign-left-num ul {
+  position: absolute;
+  width: 30px;
+}
+
+.sign-left-num ul li {
+  height: 72px;
+  line-height: 72px;
+  text-align: center;
+  width: 30px;
+  font-size: 34px;
+  color: #7C0000;
+}

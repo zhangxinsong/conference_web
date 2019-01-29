@@ -1,0 +1,193 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?n9dav5');
+  src:  url('fonts/icomoon.eot?n9dav5#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?n9dav5') format('truetype'),
+    url('fonts/icomoon.woff?n9dav5') format('woff'),
+    url('fonts/icomoon.svg?n9dav5#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-add_two:before {
+  content: "\e929";
+  color: #888;
+}
+.icon-barrage:before {
+  content: "\e927";
+  color: #888;
+}
+.icon-calendar:before {
+  content: "\e928";
+  color: #888;
+}
+.icon-signup_manage:before {
+  content: "\e923";
+  color: #888;
+}
+.icon-guest_manage:before {
+  content: "\e924";
+  color: #888;
+}
+.icon-conference_manage:before {
+  content: "\e925";
+  color: #888;
+}
+.icon-app_manage:before {
+  content: "\e926";
+  color: #888;
+}
+.icon-alert-success .path1:before {
+  content: "\e90f";
+  color: rgb(255, 255, 255);
+}
+.icon-alert-success .path2:before {
+  content: "\e913";
+  margin-left: -1em;
+  color: rgb(0, 179, 158);
+}
+.icon-alert-info .path1:before {
+  content: "\e91a";
+  color: rgb(255, 255, 255);
+}
+.icon-alert-info .path2:before {
+  content: "\e91c";
+  margin-left: -1em;
+  color: rgb(255, 139, 0);
+}
+.icon-alert-error:before {
+  content: "\e91f";
+  color: #4c4c4c;
+}
+.icon-edit01:before {
+  content: "\e90a";
+}
+.icon-remove:before {
+  content: "\e90b";
+}
+.icon-right:before {
+  content: "\e90d";
+}
+.icon-delete:before {
+  content: "\e90c";
+  color: #555;
+}
+.icon-add-white:before {
+  content: "\e90e";
+  color: #fff;
+}
+.icon-arrow-down:before {
+  content: "\e910";
+  color: #555;
+}
+.icon-arrow-right:before {
+  content: "\e911";
+  color: #555;
+}
+.icon-arrow-left:before {
+  content: "\e912";
+  color: #555;
+}
+.icon-position:before {
+  content: "\e914";
+  color: #fff;
+}
+.icon-airplane:before {
+  content: "\e915";
+  color: #fff;
+}
+.icon-food:before {
+  content: "\e916";
+  color: #fff;
+}
+.icon-calendar2:before {
+  content: "\e917";
+  color: #888;
+}
+.icon-arrow-down-01:before {
+  content: "\e918";
+  color: #555;
+}
+.icon-search:before {
+  content: "\e919";
+  color: #d0d0d0;
+}
+.icon-download:before {
+  content: "\e91b";
+  color: #555;
+}
+.icon-selected-small:before {
+  content: "\e91d";
+  color: #fff;
+}
+.icon-selected-big:before {
+  content: "\e91e";
+  color: #fff;
+}
+.icon-dine:before {
+  content: "\e920";
+  color: #fff;
+}
+.icon-accommodation:before {
+  content: "\e921";
+  color: #fff;
+}
+.icon-custom:before {
+  content: "\e922";
+  color: #fff;
+}
+.icon-conference-logo:before {
+  content: "\e909";
+  color: #e14d47;
+}
+.icon-signin-setting:before {
+  content: "\e902";
+  color: #888;
+}
+.icon-edit:before {
+  content: "\e903";
+  color: #888;
+}
+.icon-conference-manage:before {
+  content: "\e904";
+  color: #888;
+}
+.icon-app-manage:before {
+  content: "\e905";
+  color: #888;
+}
+.icon-guide:before {
+  content: "\e906";
+  color: #888;
+}
+.icon-activity:before {
+  content: "\e907";
+  color: #888;
+}
+.icon-pack-up:before {
+  content: "\e908";
+  color: #888;
+}
+.icon-back:before {
+  content: "\e900";
+  color: #555;
+}
+.icon-add:before {
+  content: "\e901";
+  color: #555;
+}

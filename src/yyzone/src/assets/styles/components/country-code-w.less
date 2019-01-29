@@ -1,0 +1,27 @@
+.yy-country-code-web {
+    display: inline-block;
+    position: relative;
+    .yy-country-code-el {
+        display: inline-block;
+    }
+    .country-code-content {
+        position: absolute;
+        left: 0;
+        right: 0;
+        max-height: 200px;
+        min-width: 160px;
+        background-color: @yy-background-color-light;
+        border: 1px solid @yy-border-color-light;
+        z-index: 999;
+        .overflow-scrolling();
+        li {
+            font-size: @yy-font-size-base;
+            color: @yy-text-color;
+            padding: @yy-padding-base;
+            &:hover {
+                background-color: @yy-primary-color;
+                color: @yy-background-color-light;
+            }
+        }
+    }
+}

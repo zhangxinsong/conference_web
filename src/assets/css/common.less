@@ -1,0 +1,290 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    min-width: 960px;
+    font-family: "\51AC\9752\9ED1\4F53\7B80\4F53\4E2D\6587","Tahoma","Hiragino Sans GB","Microsoft YaHei","\5FAE\8F6F\96C5\9ED1","STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif, "Apple Color Emoji" !important;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: none;
+    font-size: 14px;
+    color: #111111;
+    overflow: hidden;
+    ::selection {
+        background-color: #ffebc1!important;
+    }
+    input ,textarea, button {
+        font-family: "\51AC\9752\9ED1\4F53\7B80\4F53\4E2D\6587","Tahoma","Hiragino Sans GB","Microsoft YaHei","\5FAE\8F6F\96C5\9ED1","STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif, "Apple Color Emoji" !important;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-size-adjust: none;
+    }
+    input, textarea, pre, pre a, pre img {
+        &::selection {
+            background-color: #ffebc1!important;
+        }
+    }
+    
+    // 滚动条样式处理
+    ::-webkit-scrollbar {
+        width: 7px;
+    }
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        width: 6px;
+        min-height: 40px;
+        max-height: 100px;
+        background-color: transparent;
+    }
+    &:hover {
+        ::-webkit-scrollbar-thumb {
+            background-color: #aaa;
+        }
+    }
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    transform: translate3d(0, 0, 0) translateZ(0);
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill { 
+    background-color: transparent!important;
+    box-shadow: 0 0 0px 1000px white inset; 
+}
+
+.animate-scale {
+    transition: .25s;
+    &:active {
+        transform: scale(.93);
+    }
+}
+
+@keyframes move {
+    from {
+        left: -20px;
+    }
+    to {
+        left: 140%;
+    }
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.txt-elips {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.txt-elips-mul2 {
+    display: block;
+    display: -webkit-box;
+    text-overflow:ellipsis;
+    word-break: break-word;
+    -webkit-box-orient: vertical;
+    -ms-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    -ms-line-clamp: 2;
+    overflow: hidden;
+}
+
+.txt-elips-mul3 {
+    display: block;
+    display: -webkit-box;
+    text-overflow:ellipsis;
+    -webkit-box-orient: vertical;
+    -ms-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    -ms-line-clamp: 3;
+    overflow: hidden;
+}
+
+.txt-elips-mul4 {
+    display: block;
+    display: -webkit-box;
+    text-overflow:ellipsis;
+    -webkit-box-orient: vertical;
+    -ms-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    -ms-line-clamp: 4;
+    overflow: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: "";
+}
+
+.clearfix:after {
+    clear: both
+}
+
+button {
+    opacity: .9;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+button {
+    // min-width:68px;
+    // height:30px;
+    border-radius:4px;
+    // border: none;
+    &:hover{
+        // border: none;
+    }
+    &.confirm {
+        background:#E14C46;
+        color: #ffffff;
+        border: 1px solid #E14C46;
+        &.disable {
+            cursor: not-allowed;
+            opacity: .5!important;
+        }
+        &:hover {
+            background:#E14C46;
+            color: #ffffff;
+            border: 1px solid #E14C46;
+        }
+        &:active {
+            background:#E14C46;
+            color: #ffffff;
+            border: 1px solid #E14C46;
+        }
+    }
+    &.cancel {
+        background: #E4E4E4;
+        border: 1px solid #E4E4E4;
+        color: #555555;
+        &:hover {
+            background: #d0d0d0;
+            color: #555555;
+            border: 1px solid #E4E4E4;
+        }
+        &:focus {
+            background: #d0d0d0;
+            color: #555555;
+            border: 1px solid #E4E4E4;
+            box-shadow: none;
+        }
+        &.disable {
+            cursor: not-allowed;
+            opacity: .5!important;
+        }
+    }
+    &.normal {
+        padding: 0 !important;
+        width: 80px !important;
+        height: 30px !important;
+    }
+} 
+
+a {
+    color: #111111;
+}
+
+img {
+    display: block;
+    
+}
+
+.cover-list {
+    img {
+        max-width: 100%; 
+    }
+}
+
+.tip {
+    font-size: 12px;
+    color: #888888;
+    display: inline-block;
+}
+
+i.required {
+    color: #E14C46;
+}
+
+.ivu-input {
+    font-size: 14px!important;
+}
+
+.ivu-modal-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .ivu-modal {
+        top: 0;
+    }
+}
+.ivu-btn {
+    // padding: 5px 21px 5px!important;
+    padding: 4px 19px 3px!important;
+    font-size: 14px !important;
+}
+
+.ivu-input:focus {
+    border-color: #E14C46 !important;
+    box-shadow: none !important;
+}
+
+.ivu-input:hover {
+    border-color: #E14C46 !important;
+}
+
+input:hover {
+    border-color: #E14C46 !important;
+}
+
+.ivu-select-selection:hover, .ivu-select-selection-focused {
+    border-color: #E14C46 !important;
+    box-shadow: none !important;
+}
+
+.ivu-message {
+    .ivu-message-notice-content {
+        padding: 0!important;
+        .ivu-message-notice-content-text {
+            padding-right: 20px!important;
+            display: block!important;
+            .my-icon {
+                position: absolute;
+                top: 10px;
+                left: 20px;
+                font-size: 16px;
+                .icon-alert-error::before {
+                    color: #4C4C4C!important;
+                } 
+            }
+            .ivu-message-custom-content {
+                padding: 10px 10px 10px 40px; 
+                border-left: 4px solid #00B39E;
+                overflow: hidden;
+                > i {
+                    display: none;
+                }
+                > span {
+                    float: right;
+                    width: 229px;
+                    color: #555555;
+                    font-size: 12px;
+                    text-align: left;
+                    word-wrap: break-word;
+                    word-break: break-word;
+                    line-height: 20px;
+                }
+                &.ivu-message-success {
+                    border-left-color: #00B39E;
+                }
+                &.ivu-message-error {
+                    border-left-color: #4C4C4C;
+                }
+                &.ivu-message-warning {
+                    border-left-color: #FF8B00;
+                }
+            }
+        }
+    }
+}

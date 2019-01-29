@@ -1,0 +1,12 @@
+node_modules/
+dist/
+web/
+.idea/
+*.dll
+*.exe
+*.pak
+*.dat
+.DS_Store
+.project
+*.bin
+npm-debug.log

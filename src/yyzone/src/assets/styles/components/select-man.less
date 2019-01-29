@@ -1,0 +1,479 @@
+// 字体图标
+@import '../vsm-fonts/style.css';
+
+.vsm{
+	line-height: 1.2;
+	word-break: break-word;
+	font-size: 14px;
+	color: #495060;
+	*{
+		padding:0;margin: 0;
+		box-sizing: border-box;
+	}
+	ul,li{
+		list-style: none;
+	}
+	.elli{
+		overflow: hidden;
+		text-overflow:ellipsis;
+		white-space: nowrap;
+	}
+	.rot{
+		animation: rot_animate 0.7s infinite linear;
+		transform-origin: 50% 50%;
+	}
+	.cp{
+		cursor: pointer;
+	}
+	.section-team,.section-man{
+		.vsm-each-team,.vsm-each-man{
+			&:hover{
+				background: @yy-hover-color;
+			};
+		}
+	}
+	.vsm-mask{
+		position: fixed;
+		left: 0;right: 0;
+		top: 0;bottom: 0;
+		background: rgba(0,0,0,0.6);
+		z-index: 100;
+	}
+	.vsm-body{
+		position:fixed;
+		z-index: 101;
+		width: 49%;
+		height: 68%;
+		min-width: 750px;
+		min-height: 510px;
+		background: white;
+		left: 50%;top: 50%;
+		transform: translate(-50%,-50%);
+		border-radius: 6px;
+		overflow: hidden;
+		.part1{
+			height: 43px;
+			line-height: 43px;
+			position: relative;
+			padding: 0 14px;
+			border-bottom: 1px solid @yy-border-color-light ;
+			.r{
+				position: absolute;
+				right: 0;top: 0;
+				bottom: 0;
+				width: 40px;
+				text-align: center;
+				color: #999;
+			}
+		}
+		.part2{
+			padding-right: 240px;
+			position: absolute;
+			top: 43px;
+			bottom: 55px;
+			left: 0;
+			right: 0;
+			.col-left{
+				position: relative;
+				height: 100%;
+				border-right: 1px solid @yy-border-color-light ;
+				overflow: hidden;
+				.col-left-head{
+					height: 40px;
+					position: absolute;
+					left: 0;right: 0;
+					top: 0;
+					border-bottom: 1px solid @yy-border-color-light ;
+					li{
+						float: left;
+						height: 40px;
+						line-height: 40px;
+						text-align: center;
+						font-size: 13px;
+					}
+					.active{
+						color: @yy-primary-color;
+					}
+				}
+				.col-left-content{
+					height: 100%;
+					position: relative;
+					overflow: hidden;
+				}
+			}
+			.col-right{
+				width: 240px;
+				position: absolute;
+				top: 0;right: 0;
+				bottom: 0;
+				padding-top: 40px;
+				.col-right-head{
+					position: absolute;
+					left: 0;top: 0;right: 0;
+					font-size: 13px;
+					height: 40px;
+					line-height: 40px;
+					padding-left: 14px;
+					border-bottom: 1px solid @yy-border-color-light ;
+					&>div{
+						color: #fd4d4d;
+						position: absolute;
+						right: 14px;
+						top:0;
+					}
+				}
+				.col-right-content{
+					height: 100%;
+					position: relative;
+					overflow: auto;
+					.tit{
+						font-size: 12px;
+						background: #f8f8f8;
+						border-bottom: 1px solid @yy-border-color-light ;
+						height: 27px;
+						line-height: 27px;
+						padding-left: 14px;
+						position: relative;
+					}
+					h1,h2{
+						width: 8px;height: 8px;
+						border: 1px solid #999;
+						position: absolute;
+						right: 10px;
+						top: 0px;
+						transform: rotate(45deg);
+					}
+					h1{
+						border-top-color: transparent;
+						border-left-color: transparent;
+						top: 7px;
+					}
+					h2{
+						border-bottom-color: transparent;
+						border-right-color: transparent;
+						top: 11px;
+					}
+				}
+			}
+		}
+		.part3{
+			height: 55px;
+			position: absolute;
+			left: 0;right: 0;
+			bottom: 0;
+			border-top: 1px solid @yy-border-color-light ;
+			.btn{
+				width: 90px;
+				height: 30px;
+				line-height: 29px;
+				font-size: 12px;
+				text-align:center;
+				box-sizing: border-box;
+				border-radius: 4px;
+				color: white;
+			}
+			.submit{
+				position: absolute;
+				top: 11px;
+				right: 14px;
+				background: @yy-primary-color;
+				border:1px solid @yy-primary-color;
+			}
+			.cancel{
+				border:1px solid @yy-border-color-light ;
+				color: #333;
+				position: absolute;
+				top: 11px;
+				right: 115px;
+			}
+		}
+	}
+
+	.right-choose-item{
+		height: 38px;
+		line-height: 38px;
+		position: relative;
+		padding-left: 43px;
+		padding-right: 20px;
+		font-size: 13px;
+		&:hover{
+			background: @yy-hover-color;
+			.r{
+				display: block;
+			}
+		}
+		.ava{
+			position: absolute;
+			left: 10px;
+			top: 5px;
+		}
+		.r{
+			position: absolute;
+			right: 0;
+			top: 1px;
+			padding: 0 10px;
+			transform: scale(0.8);
+			display: none;
+			.vsm-cross{
+				color: #999;
+				font-size: 12px;
+				opacity: 0.6;
+			}
+		}
+	}
+
+	.section-dep-man{
+		height: 100%;
+		position: relative;
+		overflow: auto;
+		padding-left: 15px;
+	}
+
+	.section-dep{
+		height: 100%;
+		position: relative;
+		overflow: hidden;
+		padding-top: 47px;
+		.search-part{
+			position: absolute;
+			height: 47px;
+			left: 0;top: 0;right: 0;
+		}
+		.search-content{
+			height: 100%;
+			padding-left: 15px;
+			overflow: auto;
+		}
+	}
+
+	.section-man{
+		height: 100%;
+		position: relative;
+		overflow: hidden;
+		padding-top: 47px;
+		.search-part{
+			position: absolute;
+			height: 47px;
+			left: 0;top: 0;right: 0;
+		}
+		.search-content{
+			height: 100%;
+			padding-left: 15px;
+			overflow: auto;
+		}
+	}
+
+	.section-team{
+		height: 100%;
+		position: relative;
+		overflow: hidden;
+		padding-top: 47px;
+		.search-part{
+			position: absolute;
+			height: 47px;
+			left: 0;top: 0;right: 0;
+		}
+		.search-content{
+			height: 100%;
+			padding-left: 15px;
+			overflow: auto;
+		}
+	}
+
+    .vsm-avatar-wrapper{
+        display: inline-block;
+        overflow: hidden;        
+        font-size: 0;
+        text-align: center;
+        border-radius: 50%;
+        vertical-align: middle;
+        font-size:0;
+        .img-wrap{
+            width:100%;
+            height:100%;
+            // background: url('../../images/wait.gif') no-repeat 50% 50%;
+            background-size: 25px 25px;
+        }
+        .avatar {
+            width: 100%;
+            height: 100%;
+        }
+        .name {
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+        }
+        .dep{
+            line-height: unset;
+            color: white;
+        }
+        .team{
+            line-height: unset;
+            color: white;
+        }
+    }
+
+   	.vsm-check-box{
+		width: 14px;
+		height: 14px;
+		border: 1px solid #ededed;
+		border-radius: 2px;
+		cursor: pointer;
+		.vsm-checkbox-checked{
+			color: @yy-primary-color;
+			display: none;
+		}
+	}
+	.vsm-check-box.checked{
+		.vsm-checkbox-checked{
+			display: unset;
+		}
+	}
+	.vsm-check-box.disabled{
+		background: #f0f0f0;
+		cursor: not-allowed;
+	}
+
+	.vsm-dep-tree{
+		.vsm-dep-tree-title{
+			padding-left:  17px;
+			padding-right: 30px;
+			height: 27px;
+			line-height: 27px;
+			font-size: 13px;
+			position: relative;
+			.check-box{
+				position: absolute;
+				right: 15px;
+				top: 8px;
+			}
+			.rot-wrap{
+				position: absolute;
+				width: 17px;
+				height: 27px;
+				left: 0;
+				top: 0;
+			}
+			.close{
+				position: absolute;
+				left: 0px;
+				top: 8px;
+				font-size: 12px;
+				transform: rotate(0deg) scale(0.8);
+				transition: all 0.3s;
+			}
+			.open{
+				transform: rotate(90deg) scale(0.8);
+			}
+		}
+		.vsm-dep-tree-childrenWrap{
+			padding-left: 16px;
+		}
+	}
+
+	.vsm-each-man{
+		height: 45px;
+		padding-left: 40px;
+		position: relative;
+		padding-right: 35px;
+		padding-top: 8px;
+		.p1{
+			font-size: 13px;
+		}
+		.p2{
+			margin-top: 3px;
+			font-size: 12px;
+			color: #999;
+		}
+		.ava{
+			position: absolute;
+			left: 5px;
+			top: 9px;
+		}
+		.cbx{
+			position: absolute;
+			right: 14px;
+			top: 17px;
+		}
+	}
+
+	.vsm-each-team{
+		height: 39px;
+		padding-left: 40px;
+		position: relative;
+		padding-right: 35px;
+		padding-top: 11px;
+		.p1{
+			font-size: 13px;
+		}
+		.p2{
+			margin-top: 3px;
+			font-size: 12px;
+			color: #999;
+		}
+		.ava{
+			position: absolute;
+			left: 5px;
+			top: 5px;
+		}
+		.cbx{
+			position: absolute;
+			right: 14px;
+			top: 13px;
+		}
+	}
+
+	.vsm-loading-status{
+		height: 30px;
+		line-height: 30px;
+		font-size: 12px;
+		color: #888;
+		text-align: center;
+		._loading{
+			color:@yy-primary-color;
+			font-size: 14px;
+		}
+		._nodata{
+
+		}
+		._error{
+			&>span{
+				color: @yy-primary-color;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.vsm-search-input{
+		padding-top: 15px;
+		padding-left: 16px;
+		padding-right: 16px;
+		input{
+		    display: inline-block; 
+		    width: 100%;
+		    height: 32px;
+		    line-height: 1.5;
+		    padding: 4px 7px;
+		    font-size: 12px;
+		    border: 1px solid @yy-border-color-light ;
+		    border-radius: 4px;
+		    background-color: #fff;
+		    background-image: none;
+		    position: relative;
+		    cursor: text;
+		    outline: none;
+		    color: #666;
+		}
+	}
+}
+
+
+@keyframes rot_animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}	

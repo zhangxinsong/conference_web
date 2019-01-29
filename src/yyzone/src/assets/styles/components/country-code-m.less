@@ -1,0 +1,32 @@
+.yy-country-code-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: .4s ease all;
+    z-index: 999;
+    .country-code-bg {
+        width: 100%;
+        height: 100%;
+        background-color: @yy-background-color-opacity;
+    }
+    .country-code-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 60%;
+        background-color: @yy-background-color-base;
+        .overflow-scrolling();
+        li {
+            border-bottom: 1px solid @yy-border-color-light;
+            font-size: @yy-font-size-base;
+            color: @yy-text-color;
+            padding: @yy-padding-large;
+            &:active {
+                background-color: @yy-background-color-dark;
+            }
+        }
+    }
+}
